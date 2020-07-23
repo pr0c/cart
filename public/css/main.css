@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Muli', serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2d496c;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.main-nav .menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+
+.main-nav .menu .item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.main-nav .logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-nav .logo i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.main-nav .logo i:hover {
+    color: #d3d3d3;
+}
+
+
+.content {
+    padding: 25px;
+}
+
+.right-side {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-side i {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.right-side i:hover {
+    color: #d3d3d3;
+}
+
+.dropdown-menu > .dropdown-item {
+    color: black;
+}
+
+.g-table {
+    display: grid;
+    border: 1px solid #d8d8d8;
+}
+
+.g-table .item {
+    display: grid;
+}
+
+i.linked {
+    cursor: pointer;
+}
+
+i.linked:hover {
+    color: #a4a4a4;
+}
+
+
