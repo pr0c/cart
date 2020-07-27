@@ -14,6 +14,14 @@
     margin-top: 10px;
 }
 
+.product .title a {
+    color: #333;
+}
+
+.product .title a:hover {
+    color: #7c7c7c;
+}
+
 .products .product .image {
     display: flex;
     justify-content: center;

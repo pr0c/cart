@@ -23,6 +23,11 @@ Route::middleware('auth')->group(function() {
         Route::post('add-to-cart', 'CartController@addProduct')->name('add-to-cart');
         Route::get('cart', 'CartController@cart')->name('cart');
         Route::delete('remove-from-cart', 'CartController@remove')->name('remove-from-cart');
+        Route::prefix('product')->group(function() {
+            Route::get('/{product}', 'ShopController@productInfo')->name('product-info');
+            Route::get('comment/{comment}', 'CommentController@getComment');
+            Route::post('add-comment', 'CommentController@add')->name('add-comment');
+        });
     });
 });
 

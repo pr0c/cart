@@ -31,4 +31,12 @@ class ShopController extends Controller {
             'categories' => $categories
         ]);
     }
+
+    public function productInfo(Product $product) {
+        $product->refresh();
+
+        return view('shop.product', [
+            'product' => $product
+        ]);
+    }
 }

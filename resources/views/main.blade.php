@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/shop.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/remixicon.css') }}">
+    @yield('stylesheets', '')
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/main/main.js') }}"></script>

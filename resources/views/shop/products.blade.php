@@ -4,7 +4,9 @@
     <div class="products">
         @foreach($products as $product)
         <div id="{{ $product->id }}" class="product card">
-            <div class="title">{{ $product->title }}</div>
+            <div class="title">
+                <a href="{{ URL::route('product-info', ['product' => $product->id]) }}">{{ $product->title }}</a>
+            </div>
             <div class="image">
                 <img src="{{ asset('images/products/' . $product->image) }}" alt="product">
             </div>

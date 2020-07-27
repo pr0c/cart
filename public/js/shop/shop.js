@@ -70,3 +70,26 @@ $(document).on('click', '.category-title', function(event) {
     let category_id = $(event.target).attr('id');
 
 });
+
+$(document).on('click', '#send-comment', function(event) {
+    event.preventDefault();
+    let comment = $('#new-comment').serialize();
+    let data = comment;
+
+    $.ajax({
+        type: 'POST',
+        url: 'add-comment',
+        data: comment,
+        success: (response) => {
+            let request = $.get('comment/' + response.payload.id);
+            request.done(function(data) {
+                $('.comments').append(data.html);
+                $('.comments').scrollTop($('.comments')[0].scrollHeight);
+                $('textarea[name=text]').val('');
+            });
+        },
+        error: (response) => {
+            console.log(response);
+        }
+    });
+});
