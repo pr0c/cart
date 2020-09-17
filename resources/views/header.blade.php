@@ -21,6 +21,9 @@
             <div class="btn-group dropleft">
                 <i id="user" class="profile ri-account-circle-line"></i>
                 <div id="user-dropdown" class="dropdown-menu">
+                    @access('role:admin')
+                        <a class="dropdown-item admin-func" href="{{ URL::route('admin-panel') }}">Admin</a>
+                    @endaccess
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="{{ URL::route('logout') }}">Logout</a>
                 </div>

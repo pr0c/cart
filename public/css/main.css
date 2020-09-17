@@ -110,4 +110,9 @@ i.linked:hover {
     color: #a4a4a4;
 }
 
+.admin-func {
+    color: rgb(212, 7, 7) !important;
+    font-weight: 600;
+}
+
 

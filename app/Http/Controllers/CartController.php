@@ -22,7 +22,7 @@ class CartController extends Controller {
     public function cart() {
         $user = Auth::user();
         $cart = $user->cart->groupBy('id');
-        return view('shop/cart', [
+        return view('shop.cart', [
             'cart' => $cart
         ]);
     }

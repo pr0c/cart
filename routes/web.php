@@ -29,6 +29,10 @@ Route::middleware('auth')->group(function() {
             Route::post('add-comment', 'CommentController@add')->name('add-comment');
         });
     });
+
+    Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+        Route::get('/', 'Admin\AdminController@index')->name('admin-panel');
+    });
 });
 
 Auth::routes();
